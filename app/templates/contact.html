@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Me - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4 text-center">Get In Touch</h1>
+            <p class="lead text-center text-muted mb-5">
+                Have a question or want to work together? Send me a message!
+            </p>
+
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-md-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <form method="POST" action="{{ url_for('contact.contact') }}">
+                                {{ form.hidden_tag() }}
+
+                                <div class="mb-3">
+                                    {{ form.name.label(class="form-label") }}
+                                    {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Your name") }}
+                                    {% for error in form.name.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="mb-3">
+                                    {{ form.email.label(class="form-label") }}
+                                    {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else ""), placeholder="your@email.com") }}
+                                    {% for error in form.email.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="mb-3">
+                                    {{ form.subject.label(class="form-label") }}
+                                    {{ form.subject(class="form-control" + (" is-invalid" if form.subject.errors else ""), placeholder="What is this about?") }}
+                                    {% for error in form.subject.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="mb-3">
+                                    {{ form.message.label(class="form-label") }}
+                                    {{ form.message(class="form-control" + (" is-invalid" if form.message.errors else ""), rows="5", placeholder="Your message...") }}
+                                    {% for error in form.message.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="d-grid">
+                                    {{ form.submit(class="btn btn-primary btn-lg") }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info Sidebar -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-body text-center">
+                            <i class="bi bi-envelope text-primary" style="font-size: 2rem;"></i>
+                            <h6 class="mt-2">Email</h6>
+                            <p class="text-muted mb-0">your@email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-body text-center">
+                            <i class="bi bi-geo-alt text-primary" style="font-size: 2rem;"></i>
+                            <h6 class="mt-2">Location</h6>
+                            <p class="text-muted mb-0">Your City, Country</p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-clock text-primary" style="font-size: 2rem;"></i>
+                            <h6 class="mt-2">Response Time</h6>
+                            <p class="text-muted mb-0">Within 24-48 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

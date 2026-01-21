@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}About Me - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <!-- About Content -->
+        <div class="col-lg-8">
+            <h1 class="mb-4">About Me</h1>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <p class="lead">
+                        Hello! I'm a passionate developer who loves building web applications
+                        and solving problems with code.
+                    </p>
+                    <p>
+                        I specialize in Python and web development, with experience in Flask,
+                        HTML, CSS, Bootstrap, and database design. I enjoy creating clean,
+                        efficient, and user-friendly applications.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me [your hobbies/interests here].
+                    </p>
+                    <p>
+                        I'm always looking to learn new technologies and take on interesting
+                        projects. Feel free to <a href="{{ url_for('contact.contact') }}">reach out</a>
+                        if you'd like to collaborate!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <h2 class="mb-4">Skills & Technologies</h2>
+
+            {% if skills_by_category %}
+                {% for category, skills in skills_by_category.items() %}
+                    <div class="card shadow-sm mb-3">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">{{ category }}</h5>
+                        </div>
+                        <div class="card-body">
+                            {% for skill in skills %}
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>{{ skill.name }}</span>
+                                        {% if skill.proficiency %}
+                                            <span class="text-muted">{{ skill.proficiency }}%</span>
+                                        {% endif %}
+                                    </div>
+                                    {% if skill.proficiency %}
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar" role="progressbar"
+                                                 style="width: {{ skill.proficiency }}%;"
+                                                 aria-valuenow="{{ skill.proficiency }}"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="text-center py-4 text-muted">
+                    <p>Skills will be displayed here once added to the database.</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-person-circle text-primary" style="font-size: 8rem;"></i>
+                    </div>
+                    <h4>Your Name</h4>
+                    <p class="text-muted">Software Developer</p>
+                    <hr>
+                    <p class="mb-1"><i class="bi bi-geo-alt"></i> Your Location</p>
+                    <p class="mb-1"><i class="bi bi-envelope"></i> your@email.com</p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-link-45deg"></i> Connect</h5>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-outline-dark w-100 mb-2">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a href="#" class="btn btn-outline-primary w-100 mb-2">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="{{ url_for('resume.resume') }}" class="btn btn-outline-secondary w-100">
+                        <i class="bi bi-file-earmark-person"></i> View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

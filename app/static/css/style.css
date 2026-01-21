@@ -1,0 +1,95 @@
+/* Custom styles for Portfolio Website */
+
+/* General */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link.active {
+    font-weight: 500;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Progress bars for skills */
+.progress {
+    border-radius: 10px;
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+}
+
+/* Print styles for resume */
+@media print {
+    .navbar,
+    footer,
+    .btn {
+        display: none !important;
+    }
+
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
