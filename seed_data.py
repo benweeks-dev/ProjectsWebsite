@@ -51,6 +51,14 @@ def seed_database():
                 description="A 2D platformer game built with LÖVE2D and Lua, featuring SQLite leaderboards and physics-based gameplay.",
                 long_description="""
                 <p>A 2D platformer game created as my CS50 final project to learn Lua, game development, and database integration.</p>
+                <h5>Game Links:</h5>
+                <ul>
+                    <li><a href="https://bslope8348.github.io/cs50_final_project" target="_blank" rel="noopener">Play JumpSim in a Browser</a></li>
+                    <p>Controls: Left/Right arrow keys to move, Space to jump, Esc for menu.<br>
+                    Note: SQL is not currently supported for the web build so the leaderboard will be empty.</p>
+                    <li><a href="https://github.com/bSlope8348/cs50_final_project/releases" target="_blank" rel="noopener">Downloadable Builds for Windows/Mac</a></li>
+                    <p>Note: Will need to download .zip file, unzip the entire folder, then run JumpSim.exe or JumpSim.love</p>
+                </ul>
                 <h5>Features:</h5>
                 <ul>
                     <li>Two playable characters collecting coins and reaching exits</li>
