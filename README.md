@@ -64,3 +64,46 @@ flask shell
 
 <!-- Add a screenshot of your site here -->
 <!-- ![Screenshot](screenshot.png) -->
+
+
+## Getting Started (TODOs)
+
+  1. Create a virtual environment and install dependencies:
+  
+      python -m venv venv
+  
+      venv\Scripts\activate
+  
+      pip install -r requirements.txt
+
+  2. Run the app:
+
+      python run.py
+
+  3. Visit http://127.0.0.1:5000 in your browser
+
+  4. (Optional) Add sample data:
+
+      python seed_data.py
+
+  5. Next Steps
+
+  - Add your projects: Use seed_data.py as a template or add via Flask shell:
+  flask shell
+      - from app.models import Project
+      - p = Project(title="My Project", description="...", technologies="Python, Flask")
+      - db.session.add(p)
+      - db.session.commit()
+  - Add project screenshots: Place images in app/static/images/ and reference them in projects
+
+## Updating Projects and Skills in Database
+
+  The database (app.db) persists on disk. Once you seed it, the data stays there until you:
+  - Run seed_data.py again (which clears and re-adds everything)
+  - Delete app.db manually
+  - Modify the database via Flask shell
+
+  So for adding new projects later, you can either:
+  1. Edit seed_data.py and re-run it (replaces all data)
+  2. Use Flask shell to add individual entries without affecting existing ones
+  3. Eventually build an admin page to add/edit projects through the website
