@@ -49,13 +49,66 @@ footer a:hover {
     opacity: 0.8;
 }
 
-/* Progress bars for skills */
-.progress {
-    border-radius: 10px;
+/* Skill proficiency dots */
+.skill-dots {
+    display: inline-flex;
+    gap: 4px;
 }
 
-.progress-bar {
-    border-radius: 10px;
+.skill-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    display: inline-block;
+}
+
+.skill-dots .dot.filled {
+    background-color: #0d6efd;
+}
+
+[data-bs-theme="dark"] .skill-dots .dot {
+    background-color: #495057;
+}
+
+[data-bs-theme="dark"] .skill-dots .dot.filled {
+    background-color: #0d6efd;
+}
+
+/* Smaller dots for compact views */
+.skill-dots-sm .dot {
+    width: 8px;
+    height: 8px;
+}
+
+/* Colored tooltips for skill levels */
+.tooltip-secondary .tooltip-inner {
+    background-color: #6c757d;
+}
+.tooltip-secondary .tooltip-arrow::before {
+    border-left-color: #6c757d;
+}
+
+.tooltip-info .tooltip-inner {
+    background-color: #0dcaf0;
+    color: #000;
+}
+.tooltip-info .tooltip-arrow::before {
+    border-left-color: #0dcaf0;
+}
+
+.tooltip-primary .tooltip-inner {
+    background-color: #0d6efd;
+}
+.tooltip-primary .tooltip-arrow::before {
+    border-left-color: #0d6efd;
+}
+
+.tooltip-success .tooltip-inner {
+    background-color: #198754;
+}
+.tooltip-success .tooltip-arrow::before {
+    border-left-color: #198754;
 }
 
 /* Forms */
@@ -87,6 +140,14 @@ footer a:hover {
 
 [data-bs-theme="dark"] .project-card:hover {
     box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-bs-theme="dark"] .navbar {
+    border-bottom: 1px solid #495057;
+}
+
+[data-bs-theme="dark"] footer {
+    border-top: 1px solid #495057;
 }
 
 /* Print styles for resume */

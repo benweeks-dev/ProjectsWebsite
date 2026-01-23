@@ -84,31 +84,31 @@ def seed_database():
             ),
         ]
 
-        # Add skills (adjust proficiency levels as needed)
+        # Add skills (proficiency: 1=Learning, 2=Familiar, 3=Proficient, 4=Expert)
         skills = [
             # Languages
-            Skill(name="Python", category="Languages", proficiency=80),
-            Skill(name="JavaScript", category="Languages", proficiency=60),
-            Skill(name="HTML/CSS", category="Languages", proficiency=75),
-            Skill(name="SQL", category="Languages", proficiency=70),
-            Skill(name="C", category="Languages", proficiency=65),
-            Skill(name="C++", category="Languages", proficiency=60),
-            Skill(name="Lua", category="Languages", proficiency=70),
-            Skill(name="MATLAB", category="Languages", proficiency=85),
-            Skill(name="Visual Basic", category="Languages", proficiency=60),
+            Skill(name="Python", category="Languages", proficiency=2),
+            Skill(name="JavaScript", category="Languages", proficiency=2),
+            Skill(name="HTML/CSS", category="Languages", proficiency=3),
+            Skill(name="SQL", category="Languages", proficiency=2),
+            Skill(name="C", category="Languages", proficiency=1),
+            Skill(name="C++", category="Languages", proficiency=1),
+            Skill(name="Lua", category="Languages", proficiency=2),
+            Skill(name="MATLAB", category="Languages", proficiency=3),
+            Skill(name="Visual Basic", category="Languages", proficiency=2),
             # Frameworks & Tools
-            Skill(name="Flask", category="Frameworks & Tools", proficiency=75),
-            Skill(name="Bootstrap", category="Frameworks & Tools", proficiency=70),
-            Skill(name="LÖVE2D", category="Frameworks & Tools", proficiency=70),
-            Skill(name="Simulink", category="Frameworks & Tools", proficiency=80),
-            Skill(name="Git/GitHub", category="Frameworks & Tools", proficiency=70),
-            Skill(name="VS Code", category="Frameworks & Tools", proficiency=85),
+            Skill(name="Flask", category="Frameworks & Tools", proficiency=2),
+            Skill(name="Bootstrap", category="Frameworks & Tools", proficiency=2),
+            Skill(name="LÖVE2D", category="Frameworks & Tools", proficiency=2),
+            Skill(name="Simulink", category="Frameworks & Tools", proficiency=4),
+            Skill(name="Git/GitHub", category="Frameworks & Tools", proficiency=3),
+            Skill(name="VS Code", category="Frameworks & Tools", proficiency=3),
             # Database
-            Skill(name="SQLite3", category="Database", proficiency=75),
-            Skill(name="Database Design", category="Database", proficiency=70),
+            Skill(name="SQLite3", category="Database", proficiency=3),
+            Skill(name="Database Design", category="Database", proficiency=3),
             # Engineering
-            Skill(name="Control Systems", category="Engineering", proficiency=90),
-            Skill(name="AutoCAD", category="Engineering", proficiency=70),
+            Skill(name="Control Systems", category="Engineering", proficiency=4),
+            Skill(name="AutoCAD", category="Engineering", proficiency=2),
         ]
 
         # Add experience

@@ -35,33 +35,33 @@
             <h2 class="mb-4">Skills & Technologies</h2>
 
             {% if skills_by_category %}
+                <div class="row">
                 {% for category, skills in skills_by_category.items() %}
-                    <div class="card shadow-sm mb-3">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="mb-0">{{ category }}</h5>
-                        </div>
-                        <div class="card-body">
-                            {% for skill in skills %}
-                                <div class="mb-3">
-                                    <div class="d-flex justify-content-between mb-1">
-                                        <span>{{ skill.name }}</span>
-                                        {% if skill.proficiency %}
-                                            <span class="text-muted">{{ skill.proficiency }}%</span>
-                                        {% endif %}
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">{{ category }}</h5>
+                            </div>
+                            <div class="card-body">
+                                {% for skill in skills %}
+                                    <div class="d-flex justify-content-between align-items-center mb-2 py-1">
+                                        <span class="fw-medium">{{ skill.name }}</span>
+                                        <span class="skill-dots"
+                                              data-bs-toggle="tooltip"
+                                              data-bs-placement="left"
+                                              data-bs-custom-class="tooltip-{% if skill.proficiency == 1 %}secondary{% elif skill.proficiency == 2 %}info{% elif skill.proficiency == 3 %}primary{% else %}success{% endif %}"
+                                              title="{% if skill.proficiency == 1 %}Learning{% elif skill.proficiency == 2 %}Familiar{% elif skill.proficiency == 3 %}Proficient{% else %}Expert{% endif %}">
+                                            {% for i in range(1, 5) %}
+                                                <span class="dot {% if i <= skill.proficiency %}filled{% endif %}"></span>
+                                            {% endfor %}
+                                        </span>
                                     </div>
-                                    {% if skill.proficiency %}
-                                        <div class="progress" style="height: 10px;">
-                                            <div class="progress-bar" role="progressbar"
-                                                 style="width: {{ skill.proficiency }}%;"
-                                                 aria-valuenow="{{ skill.proficiency }}"
-                                                 aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    {% endif %}
-                                </div>
-                            {% endfor %}
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
+                </div>
             {% else %}
                 <div class="text-center py-4 text-muted">
                     <p>Skills will be displayed here once added to the database.</p>
@@ -103,4 +103,12 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+</script>
 {% endblock %}
