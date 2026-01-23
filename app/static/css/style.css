@@ -80,6 +80,15 @@ footer a:hover {
     }
 }
 
+/* Dark mode adjustments */
+[data-bs-theme="dark"] .bg-light {
+    background-color: var(--bs-dark) !important;
+}
+
+[data-bs-theme="dark"] .project-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Print styles for resume */
 @media print {
     .navbar,

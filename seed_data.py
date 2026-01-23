@@ -57,7 +57,7 @@ def seed_database():
                     <p>Controls: Left/Right arrow keys to move, Space to jump, Esc for menu.<br>
                     Note: SQL is not currently supported for the web build so the leaderboard will be empty.</p>
                     <li><a href="https://github.com/bSlope8348/cs50_final_project/releases" target="_blank" rel="noopener">Downloadable Builds for Windows/Mac</a></li>
-                    <p>Note: Will need to download .zip file, unzip the entire folder, then run JumpSim.exe or JumpSim.love</p>
+                    <p>Note: Download the .zip file, unzip the entire folder, then run JumpSim.exe or JumpSim.love</p>
                 </ul>
                 <h5>Features:</h5>
                 <ul>
@@ -86,47 +86,60 @@ def seed_database():
 
         # Add skills (adjust proficiency levels as needed)
         skills = [
+            # Languages
             Skill(name="Python", category="Languages", proficiency=80),
             Skill(name="JavaScript", category="Languages", proficiency=60),
             Skill(name="HTML/CSS", category="Languages", proficiency=75),
             Skill(name="SQL", category="Languages", proficiency=70),
             Skill(name="C", category="Languages", proficiency=65),
             Skill(name="C++", category="Languages", proficiency=60),
-            Skill(name="Lua", category="Languages", proficiency=50),
-            Skill(name="MATLAB", category="Languages", proficiency=55),
-            Skill(name="Visual Basic", category="Languages", proficiency=50),
-            Skill(name="Flask", category="Frameworks", proficiency=75),
-            Skill(name="Bootstrap", category="Frameworks", proficiency=70),
-            Skill(name="SQLAlchemy", category="Frameworks", proficiency=65),
-            Skill(name="Git", category="Tools", proficiency=70),
-            Skill(name="VS Code", category="Tools", proficiency=85),
+            Skill(name="Lua", category="Languages", proficiency=70),
+            Skill(name="MATLAB", category="Languages", proficiency=85),
+            Skill(name="Visual Basic", category="Languages", proficiency=60),
+            # Frameworks & Tools
+            Skill(name="Flask", category="Frameworks & Tools", proficiency=75),
+            Skill(name="Bootstrap", category="Frameworks & Tools", proficiency=70),
+            Skill(name="LÖVE2D", category="Frameworks & Tools", proficiency=70),
+            Skill(name="Simulink", category="Frameworks & Tools", proficiency=80),
+            Skill(name="Git/GitHub", category="Frameworks & Tools", proficiency=70),
+            Skill(name="VS Code", category="Frameworks & Tools", proficiency=85),
+            # Database
+            Skill(name="SQLite3", category="Database", proficiency=75),
+            Skill(name="Database Design", category="Database", proficiency=70),
+            # Engineering
+            Skill(name="Control Systems", category="Engineering", proficiency=90),
+            Skill(name="AutoCAD", category="Engineering", proficiency=70),
         ]
 
-        # Add experience (customize with your own)
+        # Add experience
         experiences = [
-            # Example:
-            # Experience(
-            #     title="Software Developer",
-            #     company="Company Name",
-            #     location="Denver, CO",
-            #     start_date=date(2023, 6, 1),
-            #     is_current=True,
-            #     description="Description of your role and accomplishments."
-            # ),
+            Experience(
+                title="Engineering Project Lead (Electrical)",
+                company="US Bureau of Reclamation, Technical Service Center",
+                location="Denver, CO",
+                start_date=date(2008, 6, 1),
+                end_date=date(2025, 9, 30),
+                is_current=False,
+                description="Managed six-figure projects from planning through commissioning, serving as client liaison to 5 regional offices. Led team of 6 engineers, managing project budgets and coordinating powerplant personnel/contractors. Successfully commissioned 12+ new digital control systems for hydroelectric generators. Developed efficient compliance testing workflows that reduced testing/generator downtime by 50%. Created comprehensive procedures enabling field personnel to perform routine tests independently, reducing travel costs by 25%. Mentored junior engineers in testing, generator tuning, and project management."
+            ),
         ]
 
-        # Add education (customize with your own)
+        # Add education
         education = [
-            # Example:
-            # Education(
-            #     degree="Bachelor of Science in Computer Science",
-            #     institution="University Name",
-            #     location="City, State",
-            #     start_date=date(2019, 9, 1),
-            #     end_date=date(2023, 5, 15),
-            #     gpa="3.5",
-            #     description="Relevant coursework: ..."
-            # ),
+            Education(
+                degree="CS50x: Introduction to Computer Science",
+                institution="Harvard University",
+                location="Online",
+                end_date=date(2025, 11, 1),
+                description="Comprehensive computer science fundamentals including algorithms, data structures, memory management, and software engineering principles."
+            ),
+            Education(
+                degree="Bachelor of Science in Electrical Engineering",
+                institution="Colorado School of Mines",
+                location="Golden, CO",
+                end_date=date(2008, 5, 15),
+                description="Professional Engineer (PE) License - Colorado State License, Licensed since 2013, Active through October 2027"
+            ),
         ]
 
         # Add all to database
