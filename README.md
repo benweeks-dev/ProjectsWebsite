@@ -21,7 +21,7 @@ A personal portfolio website built with Flask to showcase programming projects, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/bSlope8348/ProjectsWebsite.git
+   git clone https://github.com/benweeks-dev/ProjectsWebsite.git
    cd ProjectsWebsite
    ```
 

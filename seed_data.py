@@ -41,7 +41,7 @@ def seed_database():
                 </ul>
                 """,
                 technologies="Python, Flask, SQLAlchemy, SQLite, Bootstrap, HTML, CSS",
-                github_url="https://github.com/bSlope8348/ProjectsWebsite",
+                github_url="https://github.com/benweeks-dev/ProjectsWebsite",
                 image_filename="portfolio-screenshot.png",  # Add your screenshot filename here
                 featured=True,
                 date_completed=date(2026, 1, 20)
@@ -53,10 +53,10 @@ def seed_database():
                 <p>A 2D platformer game created as my CS50 final project to learn Lua, game development, and database integration.</p>
                 <h5>Game Links:</h5>
                 <ul>
-                    <li><a href="https://bslope8348.github.io/cs50_final_project" target="_blank" rel="noopener">Play JumpSim in a Browser</a></li>
+                    <li><a href="https://benweeks-dev.github.io/cs50_final_project" target="_blank" rel="noopener">Play JumpSim in a Browser</a></li>
                     <p>Controls: Left/Right arrow keys to move, Space to jump, Esc for menu.<br>
                     Note: SQL is not currently supported for the web build so the leaderboard will be empty.</p>
-                    <li><a href="https://github.com/bSlope8348/cs50_final_project/releases" target="_blank" rel="noopener">Downloadable Builds for Windows/Mac</a></li>
+                    <li><a href="https://github.com/benweeks-dev/cs50_final_project/releases" target="_blank" rel="noopener">Downloadable Builds for Windows/Mac</a></li>
                     <p>Note: Download the .zip file, unzip the entire folder, then run JumpSim.exe or JumpSim.love</p>
                 </ul>
                 <h5>Features:</h5>
@@ -77,7 +77,7 @@ def seed_database():
                 </ul>
                 """,
                 technologies="Lua, LÖVE2D, SQLite3, Visual Studio Code",
-                github_url="https://github.com/bSlope8348/cs50_final_project",
+                github_url="https://github.com/benweeks-dev/cs50_final_project",
                 image_filename="jumpsim-screenshot.png",
                 featured=True,
                 date_completed=date(2025, 11, 21)
