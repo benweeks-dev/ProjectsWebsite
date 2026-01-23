@@ -19,34 +19,6 @@ def seed_database():
         # Add projects
         projects = [
             Project(
-                title="Portfolio Website",
-                description="A personal portfolio website built with Flask and Bootstrap to showcase my projects, skills, and professional experience.",
-                long_description="""
-                <p>A full-stack web application built to showcase my programming projects and professional experience.</p>
-                <h5>Features:</h5>
-                <ul>
-                    <li>Responsive design using Bootstrap 5</li>
-                    <li>SQLite database with SQLAlchemy ORM</li>
-                    <li>Flask Blueprints for modular architecture</li>
-                    <li>Contact form with Flask-WTF validation</li>
-                    <li>Dynamic project gallery with detail pages</li>
-                    <li>Resume page with experience and education sections</li>
-                </ul>
-                <h5>What I Learned:</h5>
-                <ul>
-                    <li>Flask application factory pattern</li>
-                    <li>Database modeling with SQLAlchemy</li>
-                    <li>Form handling and validation</li>
-                    <li>Template inheritance with Jinja2</li>
-                </ul>
-                """,
-                technologies="Python, Flask, SQLAlchemy, SQLite, Bootstrap, HTML, CSS",
-                github_url="https://github.com/benweeks-dev/ProjectsWebsite",
-                image_filename="portfolio-screenshot.png",  # Add your screenshot filename here
-                featured=True,
-                date_completed=date(2026, 1, 20)
-            ),
-            Project(
                 title="JumpSim",
                 description="A 2D platformer game built with LÖVE2D and Lua, featuring SQLite leaderboards and physics-based gameplay.",
                 long_description="""
@@ -81,6 +53,34 @@ def seed_database():
                 image_filename="jumpsim-screenshot.png",
                 featured=True,
                 date_completed=date(2025, 11, 21)
+            ),
+            Project(
+                title="Portfolio Website",
+                description="A personal portfolio website built with Flask and Bootstrap to showcase my projects, skills, and professional experience.",
+                long_description="""
+                <p>A full-stack web application built to showcase my programming projects and professional experience.</p>
+                <h5>Features:</h5>
+                <ul>
+                    <li>Responsive design using Bootstrap 5</li>
+                    <li>SQLite database with SQLAlchemy ORM</li>
+                    <li>Flask Blueprints for modular architecture</li>
+                    <li>Contact form with Flask-WTF validation</li>
+                    <li>Dynamic project gallery with detail pages</li>
+                    <li>Resume page with experience and education sections</li>
+                </ul>
+                <h5>What I Learned:</h5>
+                <ul>
+                    <li>Flask application factory pattern</li>
+                    <li>Database modeling with SQLAlchemy</li>
+                    <li>Form handling and validation</li>
+                    <li>Template inheritance with Jinja2</li>
+                </ul>
+                """,
+                technologies="Python, Flask, SQLAlchemy, SQLite, Bootstrap, HTML, CSS",
+                github_url="https://github.com/benweeks-dev/ProjectsWebsite",
+                image_filename="portfolio-screenshot.png",  # Add your screenshot filename here
+                featured=True,
+                date_completed=date(2026, 1, 20)
             ),
         ]
 

@@ -82,7 +82,7 @@ flask shell
 
   3. Visit http://127.0.0.1:5000 in your browser
 
-  4. (Optional) Add sample data:
+  4. Populate Data:
 
       python seed_data.py
 
@@ -95,6 +95,7 @@ flask shell
       - db.session.add(p)
       - db.session.commit()
   - Add project screenshots: Place images in app/static/images/ and reference them in projects
+  - TODO: Unify screenshot framing and make screenshot click thru to project page. 
 
 ## Updating Projects and Skills in Database
 

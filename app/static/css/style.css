@@ -16,8 +16,16 @@ main {
     background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
 }
 
+.min-vh-25 {
+    min-height: 25vh;
+}
+
 .min-vh-50 {
     min-height: 50vh;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
 }
 
 /* Cards */
