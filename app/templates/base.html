@@ -3,7 +3,7 @@
 <head>
     <script>
         // Set theme before page renders to prevent flash
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-bs-theme', savedTheme);
     </script>
     <meta charset="UTF-8">
