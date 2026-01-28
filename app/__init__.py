@@ -24,8 +24,13 @@ def create_app(config_class=Config):
     app.register_blueprint(contact_bp, url_prefix='/contact')
     app.register_blueprint(resume_bp, url_prefix='/resume')
 
-    # Create database tables
+    # Create database tables and seed if empty
     with app.app_context():
         db.create_all()
+
+        from app.models import Project
+        if Project.query.first() is None:
+            from seed_data import seed_database
+            seed_database()
 
     return app
