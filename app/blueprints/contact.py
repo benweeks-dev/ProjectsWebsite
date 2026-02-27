@@ -48,7 +48,8 @@ def contact():
                     reply_to=form.email.data
                 )
                 mail.send(msg)
-            except Exception:
+            except Exception as e:
+                print(f"Mail error: {e}")
                 pass  # Message already saved to DB; don't fail the request over email
 
         flash('Your message has been sent! I will get back to you soon.', 'success')
