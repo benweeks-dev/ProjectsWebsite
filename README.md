@@ -15,7 +15,7 @@ Hosted at https://benweeks.dev/ (via render.com)
 - Project gallery with detail pages
 - Skills display with proficiency indicators
 - Resume page with work experience and education
-- Contact form with validation
+- Contact form with validation (SQL and Resend via email)
 - Responsive design
 
 ## Setup
@@ -99,7 +99,6 @@ flask shell
   - TODO: Unify screenshot framing and make screenshot click thru to project page. 
 
   6. TODO:
-  - Make contact actually usable... maybe send email to myself.
   - Update JumpSim for web leaderboard to work. 
 
 ## Updating Projects and Skills in Database
