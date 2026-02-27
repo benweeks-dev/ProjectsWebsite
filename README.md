@@ -97,6 +97,10 @@ flask shell
   - Add project screenshots: Place images in app/static/images/ and reference them in projects
   - TODO: Unify screenshot framing and make screenshot click thru to project page. 
 
+  6. TODO:
+  - Make contact actually usable... maybe send email to myself.
+  - Update JumpSim for web leaderboard to work. 
+
 ## Updating Projects and Skills in Database
 
   The database (app.db) persists on disk. Once you seed it, the data stays there until you:
