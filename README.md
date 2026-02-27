@@ -1,6 +1,7 @@
 # Portfolio Website
 
 A personal portfolio website built with Flask to showcase programming projects, skills, and professional experience.
+Hosted at https://benweeks.dev/ (via render.com)
 
 ## Technologies
 
@@ -62,7 +63,7 @@ flask shell
 
 ## Screenshot
 
-<!-- Add a screenshot of your site here -->
+<!-- Add a screenshot of site here -->
 <!-- ![Screenshot](screenshot.png) -->
 
 
