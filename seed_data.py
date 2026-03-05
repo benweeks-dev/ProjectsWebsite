@@ -117,7 +117,7 @@ def seed_database():
         # Add skills (proficiency: 1=Learning, 2=Familiar, 3=Proficient, 4=Expert)
         skills = [
             # Languages
-            Skill(name="Python", category="Languages", proficiency=2),
+            Skill(name="Python", category="Languages", proficiency=4),
             Skill(name="JavaScript", category="Languages", proficiency=2),
             Skill(name="HTML/CSS", category="Languages", proficiency=3),
             Skill(name="SQL", category="Languages", proficiency=2),
