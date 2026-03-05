@@ -52,6 +52,7 @@ def seed_database():
                 github_url="https://github.com/benweeks-dev/cs50_final_project",
                 image_filename="jumpsim-screenshot.png",
                 featured=True,
+                display_order=1,
                 date_completed=date(2025, 11, 21)
             ),
             Project(
@@ -80,8 +81,37 @@ def seed_database():
                 github_url="https://github.com/benweeks-dev/ProjectsWebsite",
                 image_filename="portfolio-screenshot.png",  # Add your screenshot filename here
                 featured=True,
+                display_order=2,
                 date_completed=date(2026, 1, 20)
             ),
+            Project(
+                title="XML Merger",
+                description="A project to merge two or more XML files (e.g. gamelist.xml) into one comprehensive file.",
+                long_description="""
+                <p>Complete toolkit for managing and standardizing gamelist.xml files across multiple platforms.</p>
+                <h5>Features:</h5>
+                <ul>
+                    <li><strong>gamelist_unifier.py</strong> - Main library for merging and standardizing gamelists</li>
+                    <li><strong>test_ngp.py</strong> - Single system processing example (NGP; edit paths inside to use for other systems)</li>
+                    <li><strong>batch_process_custom.py</strong> - Process all systems at once (paths hardcoded inside for pc setup)</li>
+                    <li><strong>deploy_unified_gamelists.py</strong> - Copy unified gamelists to Game and PC backup folders</li>
+                    <li><strong>gamelist_to_backup.py</strong> - Activate unified gamelists in folders (backs up originals, renames new ones)</li>
+                </ul>
+                <h5>What I Learned:</h5>
+                <ul>
+                    <li>How to use Python's Path library and dataclasses</li>
+                    <li>Comparing data and keeping the more detailed information</li>
+                    <li>Implementing changes to standardize older files</li>
+                    <li>Having Claude Code iterate on ideas, but debugging issues on my own when errors occurred or output incorrect.</li>
+                </ul>
+                """,
+                technologies="Python, pathlib, dataclasses, XML(ElementTree)",
+                github_url="https://github.com/benweeks-dev/xml_merger",
+                image_filename="xml_merger-screenshot.png",  # Add your screenshot filename here
+                featured=True,
+                display_order=3,
+                date_completed=date(2026, 3, 5)
+            )
         ]
 
         # Add skills (proficiency: 1=Learning, 2=Familiar, 3=Proficient, 4=Expert)

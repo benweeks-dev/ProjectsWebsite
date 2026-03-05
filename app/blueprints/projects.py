@@ -6,7 +6,7 @@ projects_bp = Blueprint('projects', __name__)
 
 @projects_bp.route('/')
 def list_projects():
-    projects = Project.query.order_by(Project.date_created.desc()).all()
+    projects = Project.query.order_by(Project.display_order).all()
     return render_template('projects/list.html', projects=projects)
 
 

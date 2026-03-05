@@ -12,6 +12,7 @@ class Project(db.Model):
     live_url = db.Column(db.String(200))
     image_filename = db.Column(db.String(100))
     featured = db.Column(db.Boolean, default=False)
+    display_order = db.Column(db.Integer, default=0)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     date_completed = db.Column(db.Date)
 

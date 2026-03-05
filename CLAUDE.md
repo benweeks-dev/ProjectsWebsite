@@ -33,7 +33,7 @@ This is a Flask portfolio website using the application factory pattern with Blu
 | `projects` | `/projects` | Project list and detail views |
 | `about` | `/about` | About page with skills |
 | `contact` | `/contact` | Contact form (Flask-WTF) |
-| `resume` | `/resume` | Resume with experience/education |
+| `resume` | `/resume` | Resume with experience/education/certifications |
 
 ### Database Models (`app/models.py`)
 - `Project` - Portfolio projects (title, description, technologies as comma-separated string, github/live URLs)
