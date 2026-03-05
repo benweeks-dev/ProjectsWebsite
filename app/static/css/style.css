@@ -38,6 +38,18 @@ main {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
+/* Pulse glow on project CTA buttons when card is hovered */
+@keyframes pulse-glow {
+    0%   { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.5); }
+    70%  { box-shadow: 0 0 0 8px rgba(13, 110, 253, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0); }
+}
+
+.project-card:hover .btn-primary,
+.project-card:hover .btn-outline-primary {
+    animation: pulse-glow 1.2s infinite;
+}
+
 /* Navigation */
 .navbar-brand {
     font-weight: bold;
