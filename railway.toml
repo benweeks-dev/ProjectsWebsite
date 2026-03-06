@@ -1,12 +1,7 @@
 [build]
 builder = "nixpacks"
+buildCommand = "pip install -r requirements.txt && python seed_data.py"
 
 [deploy]
 startCommand = "gunicorn run:app"
 restartPolicyType = "on_failure"
-
-[[services]]
-name = "portfolio"
-
-[services.build]
-buildCommand = "pip install -r requirements.txt && python seed_data.py"
