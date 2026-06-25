@@ -79,7 +79,7 @@ def seed_database():
                 """,
                 technologies="Python, Flask, SQLAlchemy, SQLite, Bootstrap, HTML, CSS",
                 github_url="https://github.com/benweeks-dev/ProjectsWebsite",
-                image_filename="portfolio-screenshot.png",  # Add your screenshot filename here
+                image_filename="portfolio-screenshot.png",
                 featured=True,
                 display_order=2,
                 date_completed=date(2026, 1, 20)
@@ -107,10 +107,36 @@ def seed_database():
                 """,
                 technologies="Python, pathlib, dataclasses, XML(ElementTree)",
                 github_url="https://github.com/benweeks-dev/xml_merger",
-                image_filename="xml_merger-screenshot.png",  # Add your screenshot filename here
+                image_filename="xml_merger-screenshot.png",
+                featured=True,
+                display_order=4,
+                date_completed=date(2026, 3, 5)
+            ),
+            Project(
+                title="Hangman (Python Implementations)",
+                description="A classic Hangman word-guessing game implemented three ways in Python: command-line, Tkinter desktop GUI, and a Flask web app.",
+                long_description="""
+                <p>A classic word-guessing game built three different ways in Python to compare console, desktop GUI, and web-based approaches to the same core game logic.</p>
+                <h5>Implementations:</h5>
+                <ul>
+                    <li><strong>CLI version</strong> - Terminal-based game with text input and game-state display</li>
+                    <li><strong>Tkinter version</strong> - Desktop GUI with on-screen keyboard and visual feedback</li>
+                    <li><strong>Flask version</strong> - Browser-playable web app version</li>
+                </ul>
+                <h5>What I Learned:</h5>
+                <ul>
+                    <li>Python code written by hand for knowledge base. Claude code used to build frontend for web base app.</li>
+                    <li>Separating game logic from the interface so it could be reused across CLI, GUI, and web layers</li>
+                    <li>Differences in state management and input handling across console, desktop, and web paradigms</li>
+                    <li>Building a minimal Flask app and routes for a simple interactive game</li>
+                </ul>
+                """,
+                technologies="Python, Tkinter, Flask",
+                github_url="https://github.com/benweeks-dev/Hangman",
+                image_filename="hangman-screenshot.png",
                 featured=True,
                 display_order=3,
-                date_completed=date(2026, 3, 5)
+                date_completed=date(2026, 6, 24)
             )
         ]
 

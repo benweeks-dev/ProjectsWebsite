@@ -45,20 +45,43 @@ Hosted at https://benweeks.dev/ (via render.com)
 
 5. Open http://127.0.0.1:5000 in your browser
 
-## Adding Content
+## Configuration
+
+Copy `.env.example` to `.env` and set:
+- `SECRET_KEY` - Flask session secret
+- `RESEND_API_KEY` / `MAIL_RECIPIENT` - enables the contact form to send a notification email via [Resend](https://resend.com) when someone submits it
+
+The app runs fine without these — submissions are still saved to the database, the email just won't send.
+
+## Managing Content
 
 Seed the database with sample data:
 ```bash
 python seed_data.py
 ```
 
-Or add content via Flask shell:
+The database (`app.db`) persists on disk. Once seeded, data stays there until you:
+- Run `seed_data.py` again (clears and re-adds everything)
+- Delete `app.db` manually
+- Modify the database via Flask shell
+
+To add or update content later:
+1. Edit `seed_data.py` and re-run it (replaces all data), or
+2. Use Flask shell to add individual entries without affecting existing ones:
+   ```bash
+   flask shell
+   >>> from app.models import Project
+   >>> p = Project(title="My Project", description="Description here", technologies="Python, Flask")
+   >>> db.session.add(p)
+   >>> db.session.commit()
+   ```
+3. Eventually build an admin page to add/edit projects through the website
+
+Project screenshots go in `app/static/images/`, referenced from the project's record.
+
+View submitted contact messages:
 ```bash
-flask shell
->>> from app.models import Project
->>> p = Project(title="My Project", description="Description here", technologies="Python, Flask")
->>> db.session.add(p)
->>> db.session.commit()
+python messages.py
 ```
 
 ## Screenshot
@@ -66,49 +89,7 @@ flask shell
 <!-- Add a screenshot of site here -->
 <!-- ![Screenshot](screenshot.png) -->
 
+## Roadmap
 
-## Getting Started (TODOs)
-
-  1. Create a virtual environment and install dependencies:
-  
-      python -m venv venv
-  
-      venv\Scripts\activate
-  
-      pip install -r requirements.txt
-
-  2. Run the app:
-
-      python run.py
-
-  3. Visit http://127.0.0.1:5000 in your browser
-
-  4. Populate Data:
-
-      python seed_data.py
-
-  5. Next Steps
-
-  - Add your projects: Use seed_data.py as a template or add via Flask shell:
-  flask shell
-      - from app.models import Project
-      - p = Project(title="My Project", description="...", technologies="Python, Flask")
-      - db.session.add(p)
-      - db.session.commit()
-  - Add project screenshots: Place images in app/static/images/ and reference them in projects
-  - TODO: Unify screenshot framing and make screenshot click thru to project page. 
-
-  6. TODO:
-  - Update JumpSim for web leaderboard to work. 
-
-## Updating Projects and Skills in Database
-
-  The database (app.db) persists on disk. Once you seed it, the data stays there until you:
-  - Run seed_data.py again (which clears and re-adds everything)
-  - Delete app.db manually
-  - Modify the database via Flask shell
-
-  So for adding new projects later, you can either:
-  1. Edit seed_data.py and re-run it (replaces all data)
-  2. Use Flask shell to add individual entries without affecting existing ones
-  3. Eventually build an admin page to add/edit projects through the website
+- Unify screenshot framing and make screenshots click through to the project page
+- Fix JumpSim web leaderboard
